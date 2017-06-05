@@ -1,6 +1,6 @@
-# A custom Vue Boilerplate
-
-> based on the original webpack vue template
+# vue-webpack-typescript-light
+A lightweight boilerplate for scalable vue 2.x applications
+based on the original webpack vue template
 
 ## Build Setup
 
