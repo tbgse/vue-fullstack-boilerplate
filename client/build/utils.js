@@ -35,7 +35,7 @@ exports.cssLoaders = function (options) {
       loaders.push({
         loader: 'sass-resources-loader',
         options: {
-          resources: 'client/src/styles/variables.scss', // for example
+          resources: 'src/styles/variables.scss', // for example
         }
       })
     }
