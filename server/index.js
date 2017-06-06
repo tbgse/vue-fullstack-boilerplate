@@ -19,10 +19,6 @@ mongoose.connection.once('open', () => {
 // Importing Mongoose models
 require('./models/Example');
 
-app.get('/', function(req, res) {
-  res.send('hello world! 123');
-});
-
 const port = process.env.PORT || 8000;
 app.listen(port, function() {
   console.log(chalk.green(`server is listening on port ${port}.`));
