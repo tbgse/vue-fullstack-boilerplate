@@ -1,12 +1,13 @@
 {
-  "name": "vue dev boilerplate",
+  "name": "vue-dev-boilerplate",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Tobias Guse",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "dev-client": "node build/dev-server.js",
+    "dev-server": "nodemon server/index.js",
+    "start": "concurrently \"npm run dev-client\" \"npm run dev-server\"",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
@@ -24,6 +25,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "chalk": "^1.1.3",
+    "concurrently": "^3.4.0",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
