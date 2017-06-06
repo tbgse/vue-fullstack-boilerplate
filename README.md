@@ -1,4 +1,4 @@
-# vue-webpack-typescript-light
+# vue-fullstack-boilerplate
 A lightweight boilerplate for scalable vue 2.x applications
 based on the original webpack vue template
 
@@ -6,10 +6,10 @@ based on the original webpack vue template
 
 ``` bash
 # install dependencies
-npm install
+npm run install-all
 
-# serve with hot reload at localhost:8080
-npm run dev
+# run both webpack dev server and express server
+npm run start
 
 # build for production with minification
 npm run build
