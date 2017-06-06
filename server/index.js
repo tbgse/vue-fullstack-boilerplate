@@ -1,13 +1,9 @@
 // loading environment variables
 require('dotenv').config();
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const helmet = require('helmet');
 const mongoose = require('mongoose');
 const chalk = require('chalk');
-const app = express();
-
+const app = require('./app');
 // Connect to Database
 console.log('Connecting to database...');
 mongoose.connect(process.env.DATABASE);
@@ -19,12 +15,9 @@ mongoose.connection.on('error', (err) => {
 mongoose.connection.once('open', () => {
   console.log(chalk.green('Successfully connected to database.'));
 });
-// Using helmet for some added security
-app.use(helmet());
 
-// Takes the raw requests and turns them into usable properties on req.body
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// Importing Mongoose models
+require('./models/Example');
 
 app.get('/', function(req, res) {
   res.send('hello world! 123');
